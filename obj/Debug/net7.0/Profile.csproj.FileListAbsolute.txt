@@ -24,3 +24,11 @@ C:\jaydeep_git\Profile\obj\Debug\net7.0\refint\Profile.dll
 C:\jaydeep_git\Profile\obj\Debug\net7.0\Profile.pdb
 C:\jaydeep_git\Profile\obj\Debug\net7.0\Profile.genruntimeconfig.cache
 C:\jaydeep_git\Profile\obj\Debug\net7.0\ref\Profile.dll
+C:\jaydeep_git\Profile\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\jaydeep_git\Profile\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\jaydeep_git\Profile\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\jaydeep_git\Profile\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\jaydeep_git\Profile\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\jaydeep_git\Profile\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\jaydeep_git\Profile\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\jaydeep_git\Profile\obj\Debug\net7.0\Profile.csproj.CopyComplete
