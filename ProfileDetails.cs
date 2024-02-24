@@ -10,4 +10,16 @@ public static class ProfileDetails
         }
         return _lstProfile;
     }
+
+    public static bool AddInfoDetails(int Id,string info)
+    {
+         if(_lstProfile!=null)
+        {
+            _lstProfile[0].AddInfo.Add(new AdditionalInformation(){Id=Id,Info=info});
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
 }

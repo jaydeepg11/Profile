@@ -30,10 +30,6 @@ public class ProfileController: ControllerBase
     [Authorize]
     public IActionResult Post(int Id,string info)
     {
-        var ProfileDemo=new ProfileDemo();
-        ProfileDemo.AddInfo.Add(new AdditionalInformation(){Id=Id,Info=info});
-        return Ok(true);
-    }
-
-    
+        return Ok(ProfileDetails.AddInfoDetails(Id,info));
+    }    
 }
