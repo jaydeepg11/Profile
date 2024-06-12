@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\jaydeep_git\\Profile\\Profile.csproj": {}
+    "C:\\jaydeep_git\\profile\\Profile.csproj": {}
   },
   "projects": {
-    "C:\\jaydeep_git\\Profile\\Profile.csproj": {
+    "C:\\jaydeep_git\\profile\\Profile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\jaydeep_git\\Profile\\Profile.csproj",
+        "projectUniqueName": "C:\\jaydeep_git\\profile\\Profile.csproj",
         "projectName": "Profile",
-        "projectPath": "C:\\jaydeep_git\\Profile\\Profile.csproj",
+        "projectPath": "C:\\jaydeep_git\\profile\\Profile.csproj",
         "packagesPath": "C:\\Users\\Jaydeep\\.nuget\\packages\\",
-        "outputPath": "C:\\jaydeep_git\\Profile\\obj\\",
+        "outputPath": "C:\\jaydeep_git\\profile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jaydeep\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,10 @@
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
