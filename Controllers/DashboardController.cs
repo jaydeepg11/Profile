@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
+using Microsoft.AspNetCore.DataProtection;
 namespace Profile.Controllers;
 
 [ApiController]
@@ -9,9 +10,11 @@ namespace Profile.Controllers;
 public class DashboardController: ControllerBase
 {
     public readonly IDistributedCache _distCache;
-    public DashboardController(IDistributedCache distCache)
+    public readonly IDataProtector _Protector;
+    public DashboardController(IDistributedCache distCache,IDataProtectionProvider Provider)
     {
         _distCache = distCache;
+        _Protector=Provider.CreateProtector("MyPurpose.StringProtection");
     }
 
     [HttpGet(Name = "GetProfileDist")]
@@ -41,4 +44,17 @@ public class DashboardController: ControllerBase
          var profile = ProfileDetails.getProfileData();
         return profile;
     }
+
+    [HttpPost]
+    public string Encrypt(string Name)
+    {
+        return _Protector.Protect(Name);
+    }
+
+    [HttpPost]
+    public string Decrypt(string EncName)
+    {
+        return _Protector.Unprotect(EncName);
+    }
+
 }
