@@ -1,11 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Caching.Memory;
 namespace Profile.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ProfileController: ControllerBase
 {
+
+public readonly IMemoryCache _memory;
+    public ProfileController(IMemoryCache memory)
+    {
+        _memory=memory;
+    }
+
     [HttpPost]
     [Route("Login")]
     [AllowAnonymous]
@@ -23,7 +31,18 @@ public class ProfileController: ControllerBase
     [Authorize]
     public IEnumerable<ProfileDemo> Get()
     {
-        return ProfileDetails.getProfileData();
+
+        
+        var profile1 =_memory.TryGetValue("Profile",out IEnumerable<ProfileDemo> data);
+
+         if(profile1==false){
+         var profile = ProfileDetails.getProfileData();
+        _memory.Set("Profile",profile);
+        return profile;
+        }
+        else{
+            return data;
+        } 
     }
 
     [HttpPost(Name = "PostProfile")]

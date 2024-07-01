@@ -34,6 +34,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddSwaggerGen();
 
+//IMemory Cache
+builder.Services.AddMemoryCache();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BSxvxiZPBJTvsOoV3L/wAUgKJeNd7p2T6OTdrSzg1gTVBIOEjwP7VARCEppt+Y9Y1dOAc3f8XYMFunZD5V7nBA==",
+  "dgSpecHash": "8TnlRNUpjHlzFckevaWZ1gTi6MNNBxk2aj80Kiz1VtXQoEnsomTUFU9lG1nLMVJhx60kgsHRP2UaaAlAgE/hdw==",
   "success": true,
   "projectFilePath": "C:\\jaydeep_git\\profile\\Profile.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Jaydeep\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
