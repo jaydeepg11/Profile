@@ -36,6 +36,12 @@ builder.Services.AddEndpointsApiExplorer();
 
 //IMemory Cache
 builder.Services.AddMemoryCache();
+builder.Services.AddStackExchangeRedisCache(option =>
+{
+    option.Configuration = "http://localhost:5215";
+    option.InstanceName = "SimpleInstance";
+}
+);
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
