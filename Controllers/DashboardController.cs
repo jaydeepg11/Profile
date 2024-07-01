@@ -5,7 +5,7 @@ using System.Text.Json;
 namespace Profile.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]/{id?}")]
 public class DashboardController: ControllerBase
 {
     public readonly IDistributedCache _distCache;
@@ -15,6 +15,7 @@ public class DashboardController: ControllerBase
     }
 
     [HttpGet(Name = "GetProfileDist")]
+    
     // [Authorize]
     public async Task<IEnumerable<ProfileDemo>> Get()
     {
@@ -32,5 +33,12 @@ public class DashboardController: ControllerBase
         else{
            return JsonSerializer.Deserialize<IEnumerable<ProfileDemo>>(profile1);
         } 
+    }
+
+    [HttpGet(Name = "DetailDist")]
+    public IEnumerable<ProfileDemo> DetailDist()
+    {
+         var profile = ProfileDetails.getProfileData();
+        return profile;
     }
 }

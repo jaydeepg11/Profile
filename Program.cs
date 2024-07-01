@@ -36,12 +36,14 @@ builder.Services.AddEndpointsApiExplorer();
 
 //IMemory Cache
 builder.Services.AddMemoryCache();
+
 builder.Services.AddStackExchangeRedisCache(option =>
 {
     option.Configuration = "http://localhost:5215";
     option.InstanceName = "SimpleInstance";
 }
 );
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -49,13 +51,20 @@ if (app.Environment.IsDevelopment())
 
 }
 
-
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
-
-app.MapControllers();
+app.UseRouting();
+//Conventional Based Routing
+app.UseEndpoints(endpoints=>
+{
+    endpoints.MapControllerRoute(
+    name:"Default",
+    pattern :"api/{controller=Dashboard}/{action=DetailDist}"
+);
+});
+app.MapControllers();//Attribute base Routing - routing use [Route] properties in controller and Action Method level 
 
 app.Run();
