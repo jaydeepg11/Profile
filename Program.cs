@@ -53,7 +53,6 @@ builder.Services.AddAntiforgery(option=>
 );
 
 builder.Services.AddControllersWithViews();
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -66,6 +65,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
 app.UseRouting();
 //Conventional Based Routing
 app.UseEndpoints(endpoints=>
@@ -80,5 +80,5 @@ app.UseEndpoints(endpoints=>
 );
 });
 app.MapControllers();//Attribute base Routing - routing use [Route] properties in controller and Action Method level 
-
+app.UseCustomMiddleware();//custommiddleware
 app.Run();
