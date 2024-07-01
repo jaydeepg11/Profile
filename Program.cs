@@ -46,6 +46,14 @@ builder.Services.AddStackExchangeRedisCache(option =>
 
 builder.Services.AddDataProtection();
 
+builder.Services.AddAntiforgery(option=>
+{
+    option.HeaderName="X-CSRF-Token";
+}
+);
+
+builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -62,9 +70,13 @@ app.UseRouting();
 //Conventional Based Routing
 app.UseEndpoints(endpoints=>
 {
-    endpoints.MapControllerRoute(
-    name:"Default",
-    pattern :"api/{controller=Dashboard}/{action=DetailDist}"
+//     endpoints.MapControllerRoute(
+//     name:"Default",
+//     pattern :"api/{controller=Dashboard}/{action=DetailDist}"
+// );
+ endpoints.MapControllerRoute(
+    name:"Default1",
+    pattern :"{controller=Dashboard}/{action=DetailDist}"
 );
 });
 app.MapControllers();//Attribute base Routing - routing use [Route] properties in controller and Action Method level 

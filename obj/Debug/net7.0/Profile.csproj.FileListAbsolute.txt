@@ -89,3 +89,5 @@ C:\jaydeep_git\profile\bin\Debug\net7.0\System.Formats.Asn1.dll
 C:\jaydeep_git\profile\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\jaydeep_git\profile\bin\Debug\net7.0\System.Security.Cryptography.Xml.dll
 C:\jaydeep_git\profile\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\jaydeep_git\profile\obj\Debug\net7.0\Profile.RazorAssemblyInfo.cache
+C:\jaydeep_git\profile\obj\Debug\net7.0\Profile.RazorAssemblyInfo.cs

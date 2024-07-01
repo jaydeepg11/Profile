@@ -1,0 +1,6 @@
+@using (Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="text" name="data"/>
+    <button type="submit">Submit</button> 
+}

@@ -56,5 +56,4 @@ public class DashboardController: ControllerBase
     {
         return _Protector.Unprotect(EncName);
     }
-
 }
