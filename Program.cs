@@ -80,5 +80,5 @@ app.UseEndpoints(endpoints=>
 );
 });
 app.MapControllers();//Attribute base Routing - routing use [Route] properties in controller and Action Method level 
-app.UseCustomMiddleware();//custommiddleware
+app.UseCustomMiddleware();//custommiddleware jenkins example
 app.Run();
